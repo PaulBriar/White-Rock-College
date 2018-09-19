@@ -11,6 +11,9 @@
 
   function college_features() {
     add_theme_support('title-tag');
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerLocation1', 'Footer Menu Location 1');
+    register_nav_menu('footerLocation2', 'Footer Menu Location 2');
   }
 
   add_action('after_setup_theme', 'college_features');
