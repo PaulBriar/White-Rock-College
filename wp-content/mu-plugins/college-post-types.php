@@ -1,7 +1,14 @@
 <?php
 
 function college_post_types() {
-  register_post_type('Events', array(
+  register_post_type('events', array(
+    'supports' => array(
+      'title', 'editor', 'excerpt',
+    ),
+    'rewrite' => array(
+      'slug' => 'events'
+    ),
+    'has_archive' => true,
     'public' => true,
     'menu_icon' => 'dashicons-calendar',
     'labels' => array(
@@ -9,7 +16,7 @@ function college_post_types() {
       'add_new_item' => 'Add New Event',
       'edit_item' => 'Edit Event',
       'all_items' => 'All Events',
-      'singular_name' => 'Event',
+      'singular_name' => 'event',
     )
   ));
 }
